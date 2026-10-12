@@ -18,10 +18,10 @@ It has two portals with their own log in:
 | Member | GitHub | Main contribution |
 |---|---|---|
 | Shaine Bondoc | genesis-blip | Project setup, server core (Express, auth, roles, accounts), React layout, log in screens, residents module |
-| Angela Fantastico | _username_ | Document types, document requests, pickup schedule and holidays, printed PDF documents, QR verification |
-| Sean deGuzman | _username_ | Payments and official receipts, PayMongo QR Ph, Semaphore SMS, dashboard and reports |
-| Ariane Mandani | _username_ | Resident portal (requests, incidents, SOS, digital ID), hotlines, Firebase data import |
-| Aaliyah Austria | _username_ | Incidents, blotter, SOS alerts, bulletins and health records |
+| Angela Fantastico | cruzlala373-creator | Document types, document requests, pickup schedule and holidays, printed PDF documents, QR verification |
+| Sean deGuzman | seanturind-source | Payments and official receipts, PayMongo QR Ph, Semaphore SMS, dashboard and reports |
+| Ariane Mandani | aryanmndn | Resident portal (requests, incidents, SOS, digital ID), hotlines, Firebase data import |
+| Aaliyah Austria | asaustria | Incidents, blotter, SOS alerts, bulletins and health records |
 
 ## Concept and what the app processes
 
