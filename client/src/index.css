@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-paper font-sans text-ink antialiased; font-size: 15px; }
+  h1, h2, h3 { @apply font-display text-ink; }
+  :focus-visible { @apply outline-none ring-2 ring-stamp ring-offset-2 ring-offset-paper; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-control px-4 py-2.5 text-sm font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-brand-600 text-white hover:bg-brand-700; }
+  .btn-secondary { @apply btn border border-paper-line bg-white text-ink hover:border-brand-300 hover:bg-brand-50; }
+  .btn-danger { @apply btn bg-seal text-white hover:bg-seal-dark; }
+  .btn-ghost { @apply btn px-3 text-ink-soft hover:bg-brand-50 hover:text-brand-700; }
+  .btn-sm { @apply px-3 py-1.5 text-[13px]; }
+
+  .label { @apply mb-1.5 block text-sm font-bold text-ink-soft; }
+  .input { @apply block w-full rounded-control border border-paper-line bg-white px-3 py-2.5 text-[15px] text-ink placeholder:text-ink-faint focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200; }
+  .input-error { @apply border-seal focus:border-seal focus:ring-seal-soft; }
+  .field-error { @apply mt-1.5 text-[13px] font-bold text-seal; }
+  .hint { @apply mt-1.5 text-[13px] text-ink-muted; }
+
+  .panel { @apply rounded-panel border border-paper-line bg-paper-raised shadow-panel; }
+  .panel-pad { @apply p-5 sm:p-6; }
+
+  .ledger { @apply w-full border-collapse text-left text-sm; }
+  .ledger th { @apply border-b-2 border-brand-600 px-3 py-2.5 font-display text-[13px] font-bold text-brand-800; }
+  .ledger td { @apply border-b border-paper-rule px-3 py-3 align-top; }
+  .ledger tbody tr { @apply transition-colors hover:bg-brand-50/60; }
+
+  @media (max-width: 639px) {
+    .ledger-stack thead { @apply sr-only; }
+    .ledger-stack, .ledger-stack tbody, .ledger-stack tr, .ledger-stack td { @apply block w-full; }
+    .ledger-stack tr { @apply border-b border-paper-rule px-4 py-3; }
+    .ledger-stack td { @apply border-0 px-0 py-0.5 !text-left; }
+    .ledger-stack td:empty { @apply hidden; }
+  }
+
+  .chip { @apply inline-flex items-center gap-1 rounded-full bg-paper px-2.5 py-0.5 text-[12px] font-bold text-ink-soft; }
+}

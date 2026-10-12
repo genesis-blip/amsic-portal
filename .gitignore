@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+npm-debug.log*
+serviceAccountKey.json
+server/seed/auth-users.json
+server/seed/temporary-passwords.csv
+server/seed/import-report.txt
